@@ -1,6 +1,6 @@
 const RockPaperScissors = () => {
   return (
-    <iframe src="../public/rock-paper-scissors/12r.html"></iframe>
+    <iframe src="../rock-paper-scissors/12r.html"></iframe>
   )
 };
 

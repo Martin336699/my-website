@@ -1,6 +1,6 @@
 const Haushaltsbuch = () => {
   return (
-    <iframe src="../public/hsw-buch/hsw-buch.html"></iframe>
+    <iframe src="../hsw-buch/hsw-buch.html"></iframe>
   )
 };
 

@@ -1,6 +1,6 @@
 const ToDo = () => {
   return (
-    <iframe src="../public/todo/todo.html"></iframe>
+    <iframe src="../todo/todo.html"></iframe>
   )
 };
 

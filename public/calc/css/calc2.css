@@ -1,0 +1,50 @@
+body {
+  background-color: transparent;
+  height: auto;
+  
+}
+
+.positionCalcBody {
+  position: fixed;
+  left: 100px;
+  right: 100px;
+  top: 50px;
+  
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calcBody {
+  background: linear-gradient(90.21deg, rgba(220, 222, 243, 0.563) -5.91%, rgba(32, 44, 178, 0.498) 111.58%);
+
+  width: 450px;
+  height: 650px;
+  border-radius: 10px;
+  
+  box-shadow:
+    /* Hauptschatten */
+    rgba(32,44,178,0.4) 3px 3px 10px,
+    rgba(220,222,243,0.4) -3px -3px 10px,
+    /* Außenschatten */
+    rgba(32,44,178,0.2) 7px 7px 20px,
+    rgba(220,222,243,0.2) -7px -7px 20px,
+    /* Weicher Schatten */
+    rgba(32,44,178,0.1) 10px 10px 30px,
+    rgba(220,222,243,0.1) -10px -10px 30px;
+}
+
+.calcOutput  {
+  width: 450px;
+  min-height: 200px;
+  background-color: transparent; 
+  border: none; outline: none; text-align: right;
+  font-size: 55px;
+  color: whitesmoke;
+  padding-right: 65px;
+}
+
+i {
+  font-size: 34px;
+}

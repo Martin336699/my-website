@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <!--fontawesome-->
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+         <!-- Bootstrap CSS -->
+          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <title>Calculater2</title>
+  <link rel="stylesheet" type="text/css" href="./css/calc2.css" media="screen">
+
+</head>
+
+<body>
+  <div class="positionCalcBody">
+    <div class="calcBody">
+
+      <div class="calcOutput">
+        <input class="calcOutput" type="text" id="display" disabled>
+      </div>
+
+      <div class="calcInput">
+        <div class="d-flex justify-content-center pt-2 ">
+          <i class="fa-solid fa-c d-flex align-items-center justify-content-center rounded-circle bg-secondary mx-1" style="color: lightblue;width: 78px;height: 78px;" type="button" id="clear"></i>
+
+          <i class="bi bi-plus-slash-minus d-flex align-items-center justify-content-center rounded-circle bg-secondary mx-1" style="color: lightblue;width: 78px;height: 78px;" type="button" id="plusMinus"></i>
+
+          <i class="bi bi-percent d-flex align-items-center justify-content-center rounded-circle bg-secondary mx-1" style="color: lightblue;width: 78px;height: 78px;" type="button" id="percent"></i>
+
+          <i class="fa-solid fa-divide d-flex align-items-center justify-content-center rounded-circle bg-warning mx-1" style="color: black ;width: 78px;height: 78px;" type="button" id="divide"></i>
+       </div>
+
+       <div class="d-flex justify-content-center pt-2 ">
+          <i class="fa-solid fa-7 d-flex align-items-center justify-content-center rounded-circle bg-dark mx-1" style="color: lightblue;width: 78px;height: 78px;" type="button" id="N7"></i>
+
+          <i class="fa-solid fa-8 d-flex align-items-center justify-content-center rounded-circle bg-dark mx-1" style="color: lightblue;width: 78px;height: 78px;" type="button" id="N8"></i>
+
+          <i class="fa-solid fa-9 d-flex align-items-center justify-content-center rounded-circle bg-dark mx-1" style="color: lightblue;width: 78px;height: 78px;" type="button" id="N9"></i>
+
+          <i class="fa-solid fa-xmark d-flex align-items-center justify-content-center rounded-circle bg-warning mx-1" style="color: black ;width: 78px;height: 78px;" type="button" id="multiply"></i>
+       </div>
+
+       <div class="d-flex justify-content-center pt-2 ">
+          <i class="fa-solid fa-4 d-flex align-items-center justify-content-center rounded-circle bg-dark mx-1" style="color: lightblue;width: 78px;height: 78px;" type="button" id="N4"></i>
+
+          <i class="fa-solid fa-5 d-flex align-items-center justify-content-center rounded-circle bg-dark mx-1" style="color: lightblue;width: 78px;height: 78px;" type="button" id="N5"></i>
+
+          <i class="fa-solid fa-6 d-flex align-items-center justify-content-center rounded-circle bg-dark mx-1" style="color: lightblue;width: 78px;height: 78px;" type="button" id="N6"></i>
+
+          <i class="fa-solid fa-minus d-flex align-items-center justify-content-center rounded-circle bg-warning mx-1" style="color: black ;width: 78px;height: 78px;" type="button" id="minus"></i>
+       </div>
+
+       <div class="d-flex justify-content-center pt-2 ">
+          <i class="fa-solid fa-1 d-flex align-items-center justify-content-center rounded-circle bg-dark mx-1" style="color: lightblue;width: 78px;height: 78px;" type="button" id="N1"></i>
+
+          <i class="fa-solid fa-2 d-flex align-items-center justify-content-center rounded-circle bg-dark mx-1" style="color: lightblue;width: 78px;height: 78px;" type="button" id="N2"></i>
+
+          <i class="fa-solid fa-3 d-flex align-items-center justify-content-center rounded-circle bg-dark mx-1" style="color: lightblue;width: 78px;height: 78px;" type="button" id="N3"></i>
+
+          <i class="fa-solid fa-plus d-flex align-items-center justify-content-center rounded-circle bg-warning mx-1" style="color: black ;width: 78px;height: 78px;" type="button" id="plus"></i>
+       </div>
+
+       <div class="d-flex justify-content-center py-2 ">
+          <i class="fa-solid fa-0 d-flex align-items-center rounded-pill bg-dark mx-1" style="color: lightblue;width: 163px;height: 78px; padding-left: 28px;" type="button" id="N0"></i>
+
+          <i class="d-flex align-items-center justify-content-center rounded-circle bg-dark mx-1" style="color: lightblue;width: 78px;height: 78px;" type="button" id="komma">,</i>
+
+          <i class="fa-solid fa-equals d-flex align-items-center justify-content-center rounded-circle bg-warning mx-1" style="color: black ;width: 78px;height: 78px;" type="button" id="result"></i>
+       </div>
+      </div>
+    </div>
+  </div>  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="js/functions2.js"></script>
+    
+</body>
+</html>

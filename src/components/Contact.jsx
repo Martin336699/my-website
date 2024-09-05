@@ -25,7 +25,7 @@ export const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setButtonText('Sending...');
-    let response = await fetch("/api/contact", {
+    let response = await fetch("/api/sendEmail", {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",

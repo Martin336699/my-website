@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use("/", router);
 
-const PORT = process.env.PORT || 5002; // Change the port number here
+const PORT = process.env.PORT || 3000; // Change the port number here
 
 app.listen(PORT, () => console.log(`Server Running on port ${PORT}`));
 console.log(process.env.EMAIL_USER);

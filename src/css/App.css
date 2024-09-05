@@ -234,7 +234,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner {
   margin-top: 0;
   padding: 260px 0 100px 0;
-  background-image: url('../assets/img/footer-bg.png');
+  background-image: url('../assets/img/footer-bg1.png');
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -289,9 +289,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .banner img {
-  animation: updown 9s linear infinite;
+  border-radius: 20%;
+  /* animation: updown 9s linear infinite; */
 }
-@keyframes updown {
+/* @keyframes updown {
     0% {
         transform: translateY(-20px);
     }
@@ -301,7 +302,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     100% {
         transform: translateY(-20px);
     }
-}
+} */
 .txt-rotate > .wrap {
   border-right: 0.08em solid #666;
 }
@@ -475,7 +476,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Projects Css ************/
 .contact {
-  background-image: url('../assets/img/footer-bg.png');
+  background-image: url('../assets/img/footer-bg1.png');
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -629,7 +630,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .custom-modal .modal-dialog {
   max-width: 50%;
   margin-top: 100px;
-  
 }
 
 .custom-modal .modal-content {
@@ -644,18 +644,48 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .custom-modal .modal-header,
 .custom-modal .modal-footer {
-    border: none; /* Entfernt die oberen und unteren Linien */
+  border: none; /* Entfernt die oberen und unteren Linien */
 }
-
 
 .custom-modal .modal-body {
   flex-grow: 1;
   overflow: hidden; /* Verhindert Scrollen */
-  
 }
 
 .custom-modal iframe {
   width: 100%;
   height: calc(70vh - 56px); /* Höhe des Viewports minus die Höhe des Headers */
   border-radius: 10px;
+}
+
+/* Anpassungen für Tablets (Bildschirmbreite bis zu ca.768 px)*/
+@media (max-width :768px){
+   .custom-modal .modal-dialog{
+       max-width :80% ;
+       margin-top :50 px ;
+   }
+
+   .custom-modal .modal-content{
+       height :60 vh ; /* Reduzierte Höhe für Tablets */
+   }
+
+   .custom-modal iframe{
+       height :calc (60 vh-56 px); /* Höhe des Viewports minus die Höhe des Headers */
+   }
+}
+
+/* Anpassungen für Mobilgeräte (Bildschirmbreite bis zu ca.480 px)*/
+@media (max-width :480px){
+   .custom-modal .modal-dialog{
+       max-width :90% ;
+       margin-top :20 px ;
+   }
+
+   .custom-modal .modal-content{
+       height :50 vh ; /* Reduzierte Höhe für Mobilgeräte */
+   }
+
+   .custom-modal iframe{
+       height :calc (50 vh-56 px); /* Höhe des Viewports minus die Höhe des Headers */
+   }
 }

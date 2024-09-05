@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import { handleButtonClick } from "./Navbar.jsx";
-import headerImg from "../assets/img/ich2.0.png";
+import headerImg from "../assets/img/ich2.jpg";
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);

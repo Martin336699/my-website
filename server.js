@@ -31,8 +31,12 @@ contactEmail.verify((error) => {
     }
 });
 
-router.post("/contact", (req, res) => {
+router.post("/api/sendEmail", (req, res) => { // Ensure the endpoint matches the client request
+    console.log("Request Body:", req.body); // Logge den gesamten Anfragekörper
+
     const { firstName, lastName, email, message, phone } = req.body;
+
+    console.log("Extracted Data:", { firstName, lastName, email, message, phone }); // Logge die extrahierten Felder
 
     if (!firstName || !lastName || !email || !message) {
         return res.status(400).json({ code: 400, status: "Bad Request", error: "Missing required fields" });
@@ -44,10 +48,7 @@ router.post("/contact", (req, res) => {
         from: name,
         to: process.env.EMAIL_USER || "bronco994@web.de",
         subject: "Contact Form Submission - Portfolio",
-        html: `<p>Name: ${name}</p>
-               <p>Email: ${email}</p>
-               <p>Phone: ${phone}</p>
-               <p>Message: ${message}</p>`,
+        html: `<p>Name: ${name}</p><p>Email: ${email}</p><p>Phone: ${phone}</p><p>Message: ${message}</p>`,
     };
 
     contactEmail.sendMail(mail, (error) => {

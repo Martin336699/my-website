@@ -8,7 +8,7 @@ dotenv.config(); // Lade Umgebungsvariablen
 const app = express();
 const router = express.Router();
 
-const allowedOrigins = ['https://my-website-olive-nu.vercel.app/']; // Ersetzen Sie dies durch Ihre tatsächliche Vercel-Domain
+const allowedOrigins = ['https://my-website-olive-nu.vercel.app']; // Ersetzen Sie dies durch Ihre tatsächliche Vercel-Domain
 
 app.use(cors({
   origin: function (origin, callback) {

@@ -40,10 +40,13 @@ contactEmail.verify((error) => {
 });
 
 router.post("/contact", (req, res) => {
-  const name = req.body.firstName + " " + req.body.lastName;
-  const email = req.body.email;
-  const message = req.body.message;
-  const phone = req.body.phone;
+  const { firstName, lastName, email, message, phone } = req.body;
+  
+  if (!firstName || !lastName || !email || !message) {
+    return res.status(400).json({ code: 400, status: "All fields are required" });
+  }
+
+  const name = `${firstName} ${lastName}`;
   const mail = {
     from: name,
     to: process.env.EMAIL_USER2,

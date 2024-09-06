@@ -634,7 +634,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .custom-modal .modal-content {
   width: 99%;
-  height: 80vh; /* 80% der Höhe des Viewports */
+  height: 120vh; /* 120% der Höhe des Viewports */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -655,7 +655,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .custom-modal iframe {
   width: 100%;
-  height: calc(80vh - 56px); /* Höhe des Viewports minus die Höhe des Headers */
+  height: calc(120vh - 56px); /* Höhe des Viewports minus die Höhe des Headers */
   border-radius: 10px;
 }
 
@@ -667,11 +667,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   }
 
   .custom-modal .modal-content {
-      height: 80vh; /* Beibehaltung von 80% der Höhe auch auf Tablets */
+      height: 120vh; /* Beibehaltung von 120% der Höhe auch auf Tablets */
   }
 
   .custom-modal iframe {
-      height: calc(80vh - 56px); /* Höhe des Viewports minus die Höhe des Headers */
+      height: calc(120vh - 56px); /* Höhe des Viewports minus die Höhe des Headers */
   }
 }
 
@@ -683,10 +683,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   }
 
   .custom-modal .modal-content {
-      height: 80vh; /* Beibehaltung von 80% der Höhe auch auf Mobilgeräten */
+      height: 120vh; /* Beibehaltung von 120% der Höhe auch auf Mobilgeräten */
   }
 
   .custom-modal iframe {
-      height: calc(80vh - 56px); /* Höhe des Viewports minus die Höhe des Headers */
+      height: calc(120vh - 56px); /* Höhe des Viewports minus die Höhe des Headers */
   }
 }

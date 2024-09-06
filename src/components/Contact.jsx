@@ -37,7 +37,7 @@ export const Contact = () => {
       let result = await response.json();
       console.log(result); // Log the result to debug
       setFormDetails(formInitialDetails);
-      if (response.ok && result.ok) { // Ensure both response and result are checked
+      if (response.ok && result.message === 'Email sent successfully') { // Check for the message property
         setStatus({ success: true, message: 'Message sent successfully.' });
       } else {
         setStatus({ success: false, message: 'Something went wrong, please try again later.' });

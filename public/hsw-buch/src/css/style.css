@@ -13,27 +13,24 @@
     font-family: "Oswald";
     font-style: normal;
     font-weight: 300;
-    src: local(""),
-        url("./../fonts/oswald/oswald-v31-latin-300.woff2") format("woff2"),
-        url("./../fonts/oswald/oswald-v31-latin-300.woff") format("woff");
+    src:  url("./../fonts/oswald/oswald-v31-latin-300.woff2") format("woff2"),
+          url("./../fonts/oswald/oswald-v31-latin-300.woff") format("woff");
 }
 
 @font-face {
     font-family: "Oswald";
     font-style: normal;
     font-weight: 400;
-    src: local(""),
-        url("./../fonts/oswald/oswald-v31-latin-regular.woff2") format("woff2"),
-        url("./../fonts/oswald/oswald-v31-latin-regular.woff") format("woff");
+    src: url("./../fonts/oswald/oswald-v31-latin-regular.woff2") format("woff2"),
+         url("./../fonts/oswald/oswald-v31-latin-regular.woff") format("woff");
 }
 
 @font-face {
     font-family: "Oswald";
     font-style: normal;
     font-weight: 700;
-    src: local(""),
-        url("./../fonts/oswald/oswald-v31-latin-700.woff2") format("woff2"),
-        url("./../fonts/oswald/oswald-v31-latin-700.woff") format("woff");
+    src: url("./../fonts/oswald/oswald-v31-latin-700.woff2") format("woff2"),
+         url("./../fonts/oswald/oswald-v31-latin-700.woff") format("woff");
 }
 
 /* === Allgemeines CSS === */
@@ -66,13 +63,11 @@ option {
 
 body {
     margin: 0;
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: [col-1-start] 2rem 1fr 2rem [col-1-end 2rem col-2-start] 2rem 2fr 2rem [col-2-end 2rem col-3-start] 2rem 1fr 2rem [col-3-end];
     grid-template-columns: [col-1-start] 1fr [col-1-end col-2-start] 2fr [col-2-end col-3-start] 1fr [col-3-end];
-    -ms-grid-rows: [row-1-start] 2rem auto 2rem [row-1-end 2rem row-2-start] 2rem auto 2rem [row-2-end 2rem row-3-start] 2rem auto 2rem [row-3-end];
     grid-template-rows: [row-1-start] auto [row-1-end row-2-start] auto [row-2-end row-3-start] auto [row-3-end];
-    grid-template-areas: "navigationsleisten-bereich navigationsleisten-bereich navigationsleisten-bereich"
+    grid-template-areas: 
+        "navigationsleisten-bereich navigationsleisten-bereich navigationsleisten-bereich"
         ". eingabeformular-bereich gesamtbilanz-bereich"
         ". monatslisten-bereich gesamtbilanz-bereich";
     gap: 2rem 2rem;
@@ -106,8 +101,7 @@ h6 {
 /* === Navigationsleiste === */
 
 #navigationsleiste {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
+
     -ms-grid-column-span: 5;
     grid-area: navigationsleisten-bereich;
     display: -webkit-box;
@@ -142,8 +136,7 @@ h6 {
 /* === Eingabeformular === */
 
 #eingabeformular-container {
-    -ms-grid-row: 3;
-    -ms-grid-column: 3;
+
     grid-area: eingabeformular-bereich;
     padding: 3rem 3rem;
     background-color: #e9ecef;
@@ -313,8 +306,7 @@ button.standard:focus {
 /* === MONATSLISTEN === */
 
 #monatslisten {
-    -ms-grid-row: 5;
-    -ms-grid-column: 3;
+
     grid-area: monatslisten-bereich;
 }
 
@@ -453,9 +445,9 @@ button.standard:focus {
 /* === Gesamtbilanz === */
 
 #gesamtbilanz {
-    -ms-grid-row: 3;
+
     -ms-grid-row-span: 3;
-    -ms-grid-column: 5;
+  
     grid-area: gesamtbilanz-bereich;
     padding: 3rem 3rem;
     background-color: #e9ecef;
@@ -508,4 +500,194 @@ button.standard:focus {
 
 #gesamtbilanz>.bilanz>span:nth-of-type(2).negativ {
     background-color: #dc3545;
+}
+
+/* Responsive styles for devices with width 375px and height 667px */
+@media (max-width: 375px) and (max-height: 667px) {
+    html {
+        font-size: 50%;
+    }
+
+    body {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: 
+            "navigationsleisten-bereich"
+            "eingabeformular-bereich"
+            "gesamtbilanz-bereich"
+            "monatslisten-bereich";
+        gap: 1rem;
+    }
+
+    #navigationsleiste {
+        line-height: 6rem;
+    }
+
+    #markenname {
+        font-size: 3rem;
+    }
+
+    #markenname>[class*="fa-"] {
+        font-size: 2.5rem;
+    }
+
+    #eingabeformular-container {
+        padding: 2rem;
+    }
+
+    [class$="-eingabe-gruppe"]>label {
+        width: 6rem;
+        padding: .3rem 1rem .3rem 1.5rem;
+    }
+
+    [class$="-eingabe-gruppe"]>input {
+        padding: .3rem .5rem;
+    }
+
+    button.standard {
+        max-width: 20rem;
+        line-height: 2rem;
+        font-size: 1.2rem;
+        padding: .4rem 1.5rem;
+    }
+
+    .fehlerbox {
+        padding: 1rem 1.5rem;
+    }
+
+    .monatsliste {
+        margin: 1rem 1.5rem 0;
+    }
+
+    .monatsliste>h2>.monatsbilanz {
+        font-size: 1.5rem;
+        padding: .3rem .8rem;
+    }
+
+    .monatsliste>ul>li {
+        line-height: 2rem;
+        margin: 1rem 0;
+    }
+
+    .monatsliste>ul>li>.datum,
+    .monatsliste>ul>li>.titel,
+    .monatsliste>ul>li>.betrag,
+    .monatsliste>ul>li>.entfernen-button {
+        padding: .3rem 1rem;
+    }
+
+    .monatsliste>ul>li>.datum {
+        width: 10rem;
+    }
+
+    .monatsliste>ul>li>.entfernen-button {
+        width: 3.5rem;
+    }
+
+    #gesamtbilanz {
+        padding: 2rem;
+    }
+
+    #gesamtbilanz>.gesamtbilanz-zeile {
+        line-height: 2rem;
+    }
+
+    #gesamtbilanz>.bilanz>span:nth-of-type(2) {
+        padding: .2rem .5rem;
+    }
+}
+
+/* Responsive styles for devices with width 430px and height 932px */
+@media (max-width: 430px) and (max-height: 932px) {
+    html {
+        font-size: 55%;
+    }
+
+    body {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: 
+            "navigationsleisten-bereich"
+            "eingabeformular-bereich"
+            "gesamtbilanz-bereich"
+            "monatslisten-bereich";
+        gap: 1.5rem;
+    }
+
+    #navigationsleiste {
+        line-height: 7rem;
+    }
+
+    #markenname {
+        font-size: 3.5rem;
+    }
+
+    #markenname>[class*="fa-"] {
+        font-size: 3rem;
+    }
+
+    #eingabeformular-container {
+        padding: 2.5rem;
+    }
+
+    [class$="-eingabe-gruppe"]>label {
+        width: 7rem;
+        padding: .4rem 1.2rem .4rem 1.8rem;
+    }
+
+    [class$="-eingabe-gruppe"]>input {
+        padding: .4rem .6rem;
+    }
+
+    button.standard {
+        max-width: 22rem;
+        line-height: 2.2rem;
+        font-size: 1.4rem;
+        padding: .5rem 1.8rem;
+    }
+
+    .fehlerbox {
+        padding: 1.2rem 1.8rem;
+    }
+
+    .monatsliste {
+        margin: 1.2rem 1.8rem 0;
+    }
+
+    .monatsliste>h2>.monatsbilanz {
+        font-size: 1.7rem;
+        padding: .4rem .9rem;
+    }
+
+    .monatsliste>ul>li {
+        line-height: 2.2rem;
+        margin: 1.2rem 0;
+    }
+
+    .monatsliste>ul>li>.datum,
+    .monatsliste>ul>li>.titel,
+    .monatsliste>ul>li>.betrag,
+    .monatsliste>ul>li>.entfernen-button {
+        padding: .4rem 1.2rem;
+    }
+
+    .monatsliste>ul>li>.datum {
+        width: 11rem;
+    }
+
+    .monatsliste>ul>li>.entfernen-button {
+        width: 4rem;
+    }
+
+    #gesamtbilanz {
+        padding: 2.5rem;
+    }
+
+    #gesamtbilanz>.gesamtbilanz-zeile {
+        line-height: 2.2rem;
+    }
+
+    #gesamtbilanz>.bilanz>span:nth-of-type(2) {
+        padding: .3rem .6rem;
+    }
 }

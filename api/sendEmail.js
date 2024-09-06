@@ -36,14 +36,16 @@ import nodemailer from 'nodemailer';
 
 export default async function handler(req, res) {
     if (req.method === 'POST') {
-        const { firstName, lastName, email, phone, message } = req.body;
+        const { firstName, lastName, phone, email, message } = req.body;
 
         // Erstelle einen Transporter
         const transporter = nodemailer.createTransport({
-            service: 'gmail',
+            host: 'smtp.gmail.com', // Ersetzen Sie dies durch Ihren SMTP-Host
+            port: 587,
+            secure: false, // true für 465, false für andere Ports
             auth: {
-                user: process.env.EMAIL_USER,
-                pass: process.env.EMAIL_PASS
+                user: 'martinschmit369@gmail.com', // Ersetzen Sie dies durch Ihren SMTP-Benutzernamen
+                pass: 'piwm xvhu hxvq hqck', // Ersetzen Sie dies durch Ihr SMTP-Passwort
             },
         });
 

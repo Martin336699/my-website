@@ -26,7 +26,7 @@ export const Contact = () => {
     e.preventDefault();
     setButtonText('Sending...');
     try {
-      let response = await fetch("https://my-website-olive-nu.vercel.app/contact", {
+      let response = await fetch("/api/sendEmail", {
         method: "POST",
         headers: {
           "Content-Type": "application/json;charset=utf-8",

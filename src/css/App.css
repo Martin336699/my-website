@@ -628,15 +628,16 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /* ModalStyles.css */
 .custom-modal .modal-dialog {
-  max-width: 100%; /* Volle Breite */
-  margin-top: 100px;
+  max-width: 90%; /* Volle Breite */
+  margin-top: 40px;
 }
 
 .custom-modal .modal-content {
-  width: 100%;
+  width: 99%;
   height: 80vh; /* 80% der Höhe des Viewports */
   display: flex;
   flex-direction: column;
+  justify-content: center;
   background: linear-gradient(90.21deg, rgba(220, 222, 243, 0.966) -5.91%, rgba(32, 44, 178, 0.939) 111.58%);
   border-radius: 10px; /* Abgerundete Ecken */
   border: none;

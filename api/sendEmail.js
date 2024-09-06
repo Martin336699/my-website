@@ -44,14 +44,14 @@ export default async function handler(req, res) {
             port: 587,
             secure: false, // true für 465, false für andere Ports
             auth: {
-                user: 'martinschmit369@gmail.com', // Ersetzen Sie dies durch Ihren SMTP-Benutzernamen
-                pass: 'piwm xvhu hxvq hqck', // Ersetzen Sie dies durch Ihr SMTP-Passwort
+                user: process.env.EMAIL_USER,
+                pass: process.env.EMAIL_PASS
             },
         });
 
         const mailOptions = {
-            from: 'martinschmit369@gmail.com', // Ihre E-Mail-Adresse
-            to: 'bronco994@web.de', // Ziel-E-Mail-Adresse
+            from: process.env.EMAIL_USER, // Ihre E-Mail-Adresse
+            to: process.env.EMAIL_USER2, // Ziel-E-Mail-Adresse
             subject: 'New Contact Form Submission',
             text: `Name: ${firstName} ${lastName}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`,
         };

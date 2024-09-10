@@ -47,7 +47,7 @@ export const Banner = () => {
       <Container>
         <Row className="align-items-center">
           <Col xs={12} md={6} xl={7}>
-            <span className="tagline">Welcome to my Portfolio</span>
+            {/* <span className="tagline">Welcome to my Portfolio</span> */}
             <h1>{`Hi I'm webdecoded `}{<br />}{'=>'}<span className="wrap">{text}</span></h1>
             <p>Hello! My name is Martin Schmidt, and I am a 38-year-old self-taught web developer. I have a strong passion for technology and problem-solving, and I enjoy bringing ideas to life through code.
             On this website, you can explore my projects and learn more about my skills in HTML, CSS, JavaScript, and React. I look forward to growing in this field and embracing new opportunities and challenges ahead. Thank you for visiting!</p>

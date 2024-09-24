@@ -1,6 +1,6 @@
 const Calculator = () => {
   return (
-    <iframe src="../calc/calculater2.html"></iframe>
+    <iframe src="../calc/calculator.html"></iframe>
   )
 };
 

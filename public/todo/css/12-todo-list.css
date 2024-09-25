@@ -3,6 +3,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #5F9EA0;
 }
 
 .container {
@@ -11,11 +12,11 @@ body {
 }
 
 h1 {
+  font-family: Arial, sans-serif;
   font-size: 76px;
-  color:   rgba(32, 44, 178, 0.498);
+  color:   #87CEEB;
   text-shadow: 
-  2px 2px 4px  rgba(32, 44, 178, 0.498), 
-  -2px -2px 3px whitesmoke;
+  4px 4px 8px  rgba(32, 44, 178, 0.498)
  
 }
 
@@ -26,6 +27,7 @@ h1 {
   column-gap: 10px;
   row-gap: 10px;
   align-items: center;
+  margin-bottom: 100px;
 }
 
 .name-input,
@@ -43,6 +45,7 @@ h1 {
   font-size: 35px;
   cursor: pointer;
   border-radius: 9px;
+  padding: 16px;
 }
 
 .delete-todo-button {
@@ -51,134 +54,29 @@ h1 {
   border: none;
   font-size: 35px;
   cursor: pointer;
-  padding: 16px 32px;
+  padding: 8px 32px;
   border-radius: 9px;
 }
 
 .todoName {
-  font-size: 36px;
+  font-size: 35px;
+  background-color: white;
+  padding: 6px 16px;
+  border-radius: 9px;
 }
 
 .todoDate {
-  font-size: 36px;
+  font-size: 35px;
+  background-color: white;
+  padding: 6px 16px;
+  border-radius: 9px;
 }
 
 /* Responsive styles */
-@media (max-width: 1200px) {
-  .name-input,
-  .due-date-input,
-  .add-todo-button,
-  .delete-todo-button {
-    font-size: 32px;
-    padding: 14px;
-  }
-
-  .delete-todo-button {
-    padding: 14px 28px;
-  }
-
-  .todoName,
-  .todoDate {
-    font-size: 32px;
-  }
-}
-
-@media (max-width: 1100px) {
-  .name-input,
-  .due-date-input,
-  .add-todo-button,
-  .delete-todo-button {
-    font-size: 31px;
-    padding: 13px;
-  }
-
-  .delete-todo-button {
-    padding: 13px 26px;
-  }
-
-  .todoName,
-  .todoDate {
-    font-size: 31px;
-  }
-}
-
-@media (max-width: 992px) {
-  .name-input,
-  .due-date-input,
-  .add-todo-button,
-  .delete-todo-button {
-    font-size: 30px;
-    padding: 12px;
-  }
-
-  .delete-todo-button {
-    padding: 12px 24px;
-  }
-
-  .todoName,
-  .todoDate {
-    font-size: 30px;
-  }
-}
-
-@media (max-width: 900px) {
-  .name-input,
-  .due-date-input,
-  .add-todo-button,
-  .delete-todo-button {
-    font-size: 25px;
-    padding: 10px;
-  }
-
-  .delete-todo-button {
-    padding: 10px 20px;
-  }
-
-  .todoName,
-  .todoDate {
-    font-size: 25px;
-  }
-}
 
 @media (max-width: 800px) {
-  .name-input,
-  .due-date-input,
-  .add-todo-button,
-  .delete-todo-button {
-    font-size: 22px;
-    padding: 8px;
-  }
+  
 
-  .delete-todo-button {
-    padding: 8px 16px;
-  }
-
-  .todoName,
-  .todoDate {
-    font-size: 22px;
-  }
-}
-
-@media (max-width: 700px) {
-  .name-input,
-  .due-date-input,
-  .add-todo-button,
-  .delete-todo-button {
-    font-size: 20px;
-    padding: 6px;
-  }
-
-  .delete-todo-button {
-    padding: 6px 12px;
-  }
-
-  .todoName,
-  .todoDate {
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 600px) {
   .name-input,
   .due-date-input,
   .add-todo-button,
@@ -197,55 +95,46 @@ h1 {
   }
 }
 
-@media (max-width: 500px) {
+
+
+@media (max-width: 600px) {
   .name-input,
   .due-date-input,
-  .add-todo-button,
   .delete-todo-button {
+    font-size: 14px;
+    padding: 3px;
+  }
+
+  .add-todo-button {
     font-size: 16px;
-    padding: 4px;
+    padding: 3px 2px;
   }
 
   .delete-todo-button {
-    padding: 4px 8px;
+    padding: 6px 6px;
   }
 
   .todoName,
   .todoDate {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
 @media (max-width: 400px) {
   .name-input,
   .due-date-input,
-  .add-todo-button,
   .delete-todo-button {
-    font-size: 14px;
+    font-size: 12px;
     padding: 3px;
   }
 
-  .delete-todo-button {
-    padding: 3px 6px;
-  }
-
-  .todoName,
-  .todoDate {
+  .add-todo-button {
     font-size: 14px;
-  }
-}
-
-@media (max-width: 360px) {
-  .name-input,
-  .due-date-input,
-  .add-todo-button,
-  .delete-todo-button {
-    font-size: 12px;
-    padding: 2px;
+    padding: 3px 2px;
   }
 
   .delete-todo-button {
-    padding: 2px 4px;
+    padding: 6px 6px;
   }
 
   .todoName,
@@ -254,78 +143,8 @@ h1 {
   }
 }
 
-@media (max-width: 320px) {
-  .name-input,
-  .due-date-input,
-  .add-todo-button,
-  .delete-todo-button {
-    font-size: 10px;
-    padding: 1px;
-  }
-
-  .delete-todo-button {
-    padding: 1px 2px;
-  }
-
-  .todoName,
-  .todoDate {
-    font-size: 10px;
-  }
-}
-
-@media (max-width: 280px) {
-  .name-input,
-  .due-date-input,
-  .add-todo-button,
-  .delete-todo-button {
-    font-size: 8px;
-    padding: 1px;
-  }
-
-  .delete-todo-button {
-    padding: 1px 1px;
-  }
-
-  .todoName,
-  .todoDate {
-    font-size: 8px;
-  }
-}
-
-@media (max-width: 240px) {
-  .name-input,
-  .due-date-input,
-  .add-todo-button,
-  .delete-todo-button {
-    font-size: 6px;
-    padding: 1px;
-  }
-
-  .delete-todo-button {
-    padding: 1px 1px;
-  }
-
-  .todoName,
-  .todoDate {
-    font-size: 6px;
-  }
-}
-
-@media (max-width: 200px) {
-  .name-input,
-  .due-date-input,
-  .add-todo-button,
-  .delete-todo-button {
-    font-size: 4px;
-    padding: 1px;
-  }
-
-  .delete-todo-button {
-    padding: 1px 1px;
-  }
-
-  .todoName,
-  .todoDate {
-    font-size: 4px;
+@media (min-width: 1024) {
+  .container {
+    width: calc(100% - 20px);
   }
 }

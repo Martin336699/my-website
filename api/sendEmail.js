@@ -1,4 +1,3 @@
-console.log('process.env.EMAIL_USER', process.env.EMAIL_USER);
 import nodemailer from 'nodemailer';
 
 export default async function handler(req, res) {

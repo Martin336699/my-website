@@ -4,11 +4,12 @@ import calc from "../assets/img/calc.jpg";
 import todo from "../assets/img/todo.jpg";
 import game from "../assets/img/game.jpg";
 import household from "../assets/img/household.jpg";
-import projImg1 from "../assets/img/coming-soon.jpg";
+import wetter from "../assets/img/wetter.jpg";
 import Calculator from './Calculator'; 
 import ToDo from './ToDo';
 import RockPaperScissors from './RockPaperScissors';
 import Haushaltsbuch from './Haushaltsbuch';
+import Weather from './Weather';
 
 export const Projects = () => {
   const [showModal, setShowModal] = useState(false);
@@ -56,14 +57,10 @@ component: <RockPaperScissors />
 
 const websites = [
 {
-title: "Free Project",
+title: "Wetter-App",
 description: "Design & Development",
-imgUrl: projImg1
-},
-{
-title: "Free Project",
-description: "Design & Development",
-imgUrl: projImg1
+imgUrl: wetter,
+component: <Weather />
 }
 ];
 
@@ -85,21 +82,20 @@ return (
 
 <Tab.Pane eventKey="first">
 <Row>
-
-{apps.map((app,index)=>(<Col sm={6} md={4} key={index}><div className="proj-imgbx" onClick={()=>app.component?handleShowModal(app.component):window.open(app.link)}><img src={app.imgUrl} alt={app.title}/><div className="proj-txtx"><h4>{app.title}</h4><span>{app.description}</span></div></div></Col>))}
-
+  {apps.map((app,index)=>(<Col sm={6} md={4} key={index}><div className="proj-imgbx" onClick={()=>app.component?handleShowModal(app.component):window.open(app.link)}><img src={app.imgUrl} alt={app.title}/><div className="proj-txtx"><h4>{app.title}</h4><span>{app.description}</span></div></div></Col>))}
 </Row></Tab.Pane>
-
-{/* Wiederholen Sie das gleiche Muster für Games und Websites */}
 
 {/* Games Tab */}
 <Tab.Pane eventKey="second">
-<Row>
-  
-{games.map((game,index)=>(<Col sm={6} md={4} key={index}><div className="proj-imgbx" onClick={()=>game.component?handleShowModal(game.component):window.open(game.link)}><img src={game.imgUrl} alt={game.title}/><div className="proj-txtx"><h4>{game.title}</h4><span>{game.description}</span></div></div></Col>))}</Row></Tab.Pane>
+<Row>  
+  {games.map((game,index)=>(<Col sm={6} md={4} key={index}><div className="proj-imgbx" onClick={()=>game.component?handleShowModal(game.component):window.open(game.link)}><img src={game.imgUrl} alt={game.title}/><div className="proj-txtx"><h4>{game.title}</h4><span>{game.description}</span></div></div></Col>))}
+</Row></Tab.Pane>
 
 {/* Websites Tab */}
-<Tab.Pane eventKey="third"><Row>{websites.map((site,index)=>(<Col sm={6} md={4} key={index}><div className="proj-imgbx"><img src={site.imgUrl} alt={site.title}/><div className="proj-txtx"><h4>{site.title}</h4><span>{site.description}</span></div></div></Col>))}</Row></Tab.Pane>
+<Tab.Pane eventKey="third">
+<Row>
+  {websites.map((site,index)=>(<Col sm={6} md={4} key={index}><div className="proj-imgbx" onClick={()=>site.component?handleShowModal(site.component):window.open(site.link)}><img src={site.imgUrl} alt={site.title}/><div className="proj-txtx"><h4>{site.title}</h4><span>{site.description}</span></div></div></Col>))}
+</Row></Tab.Pane>
 
 </Tab.Content> 
             </Tab.Container> 

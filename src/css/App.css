@@ -628,16 +628,18 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /* ModalStyles.css */
 .custom-modal .modal-dialog {
-  max-width: 90%; /* Volle Breite */
-  margin-top: 40px;
+  max-width: 99%; /* Volle Breite */
+  margin-top: 6%;
+  display: flex;
+  justify-content: center;
 }
 
 .custom-modal .modal-content {
-  width: 99%;
-  height: 120vh; /* 120% der Höhe des Viewports */
+  width: 90%;
+  height: 85vh; /* 120% der Höhe des Viewports */
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   background: linear-gradient(90.21deg, rgba(220, 222, 243, 0.966) -5.91%, rgba(32, 44, 178, 0.939) 111.58%);
   border-radius: 10px; /* Abgerundete Ecken */
   border: none;
@@ -654,39 +656,55 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .custom-modal iframe {
-  width: 100%;
-  height: calc(120vh - 56px); /* Höhe des Viewports minus die Höhe des Headers */
+  width: 98%;
+  height: calc(95vh - 56px); /* Höhe des Viewports minus die Höhe des Headers */
   border-radius: 10px;
 }
+
+
+
+/* Anpassungen für Mobilgeräte (Bildschirmbreite bis zu ca.480 px) */
+@media (max-width: 480px) {
+
+  .banner h1 {
+    font-size: 2em;
+  }
+  .banner p {
+
+    font-size: .8em;
+
+  }
+  .custom-modal .modal-dialog {
+      width: 100% !important; /* Volle Breite auch auf Mobilgeräten */
+      margin: 20px 0 20px .4em !important; 
+      
+  }
+
+  .custom-modal .modal-content {
+      height: 100%; /* Beibehaltung von 120% der Höhe auch auf Mobilgeräten */
+  }
+
+
+}
+
 
 /* Anpassungen für Tablets (Bildschirmbreite bis zu ca.768 px) */
 @media (max-width: 768px) {
   .custom-modal .modal-dialog {
-      max-width: 100%; /* Volle Breite auch auf Tablets */
+      width: 95%; /* Volle Breite auch auf Tablets */
       margin-top: 50px; 
   }
 
   .custom-modal .modal-content {
-      height: 120vh; /* Beibehaltung von 120% der Höhe auch auf Tablets */
+      height: 95vh; /* Beibehaltung von 120% der Höhe auch auf Tablets */
   }
 
   .custom-modal iframe {
-      height: calc(120vh - 56px); /* Höhe des Viewports minus die Höhe des Headers */
+      height: calc(95vh - 56px); /* Höhe des Viewports minus die Höhe des Headers */
   }
 }
 
-/* Anpassungen für Mobilgeräte (Bildschirmbreite bis zu ca.480 px) */
-@media (max-width: 480px) {
-  .custom-modal .modal-dialog {
-      max-width: 100%; /* Volle Breite auch auf Mobilgeräten */
-      margin-top: 20px; 
-  }
 
-  .custom-modal .modal-content {
-      height: 120vh; /* Beibehaltung von 120% der Höhe auch auf Mobilgeräten */
-  }
 
-  .custom-modal iframe {
-      height: calc(120vh - 56px); /* Höhe des Viewports minus die Höhe des Headers */
-  }
-}
+
+

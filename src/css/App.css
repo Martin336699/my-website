@@ -549,6 +549,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 100%;
 }
 
+
+
 /************ Footer Css ************/
 .footer {
   padding: 0 0 50px 0;
@@ -640,7 +642,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  background: linear-gradient(90.21deg, rgba(220, 222, 243, 0.966) -5.91%, rgba(32, 44, 178, 0.939) 111.58%);
+  background-color: transparent;
   border-radius: 10px; /* Abgerundete Ecken */
   border: none;
 }
@@ -661,6 +663,21 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-radius: 10px;
 }
 
+.modal-body {
+  padding: 0 !important;
+  overflow: visible !important;
+}
+
+.btn-secondary{
+  background-color: #007bff !important;
+  border: 0.1rem solid #007bff !important;
+}
+
+.aLink {
+  color: #007bff !important;
+  font-size: 1.2em;
+  text-decoration: none;
+}
 
 
 /* Anpassungen für Mobilgeräte (Bildschirmbreite bis zu ca.480 px) */

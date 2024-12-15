@@ -4,12 +4,14 @@ import calc from "../assets/img/calc.jpg";
 import todo from "../assets/img/todo.jpg";
 import game from "../assets/img/game.jpg";
 import household from "../assets/img/household.jpg";
-import wetter from "../assets/img/wetter.jpg";
+import wetter from "../assets/img/windy.png";
+import lernapp from "../assets/img/lernapp.png";
 import Calculator from './Calculator'; 
 import ToDo from './ToDo';
 import RockPaperScissors from './RockPaperScissors';
 import Haushaltsbuch from './Haushaltsbuch';
 import Weather from './Weather';
+import LernApp from './LernApp';
 
 export const Projects = () => {
   const [showModal, setShowModal] = useState(false);
@@ -61,7 +63,13 @@ title: "Wetter-App",
 description: "Design & Development",
 imgUrl: wetter,
 component: <Weather />
-}
+},
+{
+  title: "LernApp",
+  description: "Design & Development",
+  imgUrl: lernapp,
+  component: <LernApp />
+  }
 ];
 
 return (
@@ -103,7 +111,7 @@ return (
         </Row> 
         {/* Modal für Projekte */}
         {/* Modal-Komponente zur Anzeige von Projektinformationen */}
-<Modal show={showModal} onHide={handleCloseModal} className='custom-modal'><Modal.Header closeButton><Modal.Title>Project Details</Modal.Title></Modal.Header><Modal.Body>{selectedProjectComponent}</Modal.Body><Modal.Footer><Button variant='secondary' onClick={handleCloseModal}>Close</Button></Modal.Footer></Modal>
+<Modal show={showModal} onHide={handleCloseModal} className='custom-modal'><Modal.Header closeButton><Modal.Title></Modal.Title></Modal.Header><Modal.Body>{selectedProjectComponent}</Modal.Body><Modal.Footer><Button variant='secondary' onClick={handleCloseModal}>Close</Button></Modal.Footer></Modal>
 
 {/* Container-Ende */}
 </Container> 

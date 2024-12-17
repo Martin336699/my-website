@@ -60,7 +60,7 @@ export const Contact = () => {
             <h2>Get In Touch</h2>
             <form onSubmit={handleSubmit}>
               <Row>
-                <Col sm={6} className="px-1">
+                <Col sm={6} className="inputField">
                   <input
                     type="text"
                     value={formDetails.firstName}
@@ -69,7 +69,7 @@ export const Contact = () => {
                     required
                   />
                 </Col>
-                <Col sm={6} className="px-1">
+                <Col sm={6} className="inputField">
                   <input
                     type="text"
                     value={formDetails.lastName}
@@ -78,7 +78,7 @@ export const Contact = () => {
                     required
                   />
                 </Col>
-                <Col sm={6} className="px-1">
+                <Col sm={6} className="inputField">
                   <input
                     type="email"
                     value={formDetails.email}
@@ -87,7 +87,7 @@ export const Contact = () => {
                     required
                   />
                 </Col>
-                <Col sm={6} className="px-1">
+                <Col sm={6} className="inputField">
                   <input
                     type="tel"
                     value={formDetails.phone}

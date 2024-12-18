@@ -3,11 +3,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: red;
-  background-image: url(../assets/bg-white-pattern.png);
-  background-repeat: no-repeat;
-  background-size: cover; 
-  background-position: center center; 
+  background: #000428;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #004e92, #000428);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #004e92, #000428); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 100vh;
 }
 
 .container {
@@ -17,9 +16,9 @@ body {
 h1 {
   font-family: Arial, sans-serif;
   font-size: 15em;
-  background-image: linear-gradient( 109.6deg,  rgba(102,51,153,1) 11.2%, rgba(2,0,4,1) 91.1% );
+  background-image: linear-gradient( 109.6deg,  rgba(102,51,153,1) -10.2%, rgba(2,0,4,1) 105.1% );
   -webkit-background-clip: text;
-  color: transparent;
+  color: #fff;
   text-shadow: 4em 4em 8em rgba(32, 44, 178, 0.498);
 }
 
@@ -52,7 +51,7 @@ h1 {
     transition: 0.5s;
     background-size: 200% auto;
     color: white;            
-    box-shadow: 0 0 20px #eee;
+    box-shadow: 0 0 8px #eee;
     border-radius: 10px;
     display: block;
   }
@@ -75,7 +74,7 @@ h1 {
    background-size: 200% auto;
    cursor: pointer;
    color: white;            
-   box-shadow: 0 0 20px #eee;
+   box-shadow: 0 0 8px #eee;
    border-radius: 10px;
    display: block;
  }

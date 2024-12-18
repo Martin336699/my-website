@@ -52,6 +52,11 @@ body {
   grid-template-rows: [row-1-start] auto [row-1-end row-2-start] auto [row-2-end row-3-start] auto [row-3-end];
   grid-template-areas: "navigationsleisten-bereich navigationsleisten-bereich navigationsleisten-bereich" ". eingabeformular-bereich gesamtbilanz-bereich" ". monatslisten-bereich gesamtbilanz-bereich";
   gap: 2rem 2rem;
+  height: 100vh;
+  background: #000428;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #004e92, #000428);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #004e92, #000428); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 h1,
 h2,
@@ -86,6 +91,7 @@ h6 {
   justify-content: center;
   background-color: #343a40;
   line-height: 8rem;
+  height: 10rem;
 }
 #navigationsleiste > a {
   text-decoration: none;

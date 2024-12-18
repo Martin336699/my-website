@@ -241,7 +241,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /************ Banner Css ************/
 .banner {
   margin-top: 0;
-  padding: 260px 0 100px 0;
+  padding: 160px 0 100px 0;
   background: #000428;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to left, #004e92, #000428);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to left, #004e92, #000428); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -274,6 +274,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   line-height: 1;
   margin-bottom: 20px;
   display: block;
+  color: #fff;
 }
 .banner p {
   color: #B8B8B8;
@@ -436,8 +437,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .proj-imgbx {
   position: relative;
   border-radius: 30px;
-  overflow: hidden;
   margin-bottom: 24px;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  overflow: hidden;
 }
 .proj-imgbx::before {
   content: "";
@@ -446,13 +450,26 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   position: absolute;
   width: 100%;
   height: 0;
+  z-index: 1;
   transition: 0.4s ease-in-out;
 }
 .proj-imgbx:hover::before {
   height: 100%;
+ 
 }
+
+.proj-imgbx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s ease-in-out;
+}
+
 .proj-txtx {
-  color: white;
+  color: #000;
   position: absolute;
   text-align: center;
   top: 65%;
@@ -487,7 +504,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: -4;
 }
 
-/************ Projects Css ************/
+/************ Contact Css ************/
 .contact {
   background: #000428;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #004e92, #000428);  /* Chrome 10-25, Safari 5.1-6 */
@@ -498,7 +515,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat; */
-  padding: 60px 0 200px 0;
+  padding: 10px 0 100px 0;
 }
 .contact img {
   width: 92%;
@@ -507,6 +524,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 	font-size: 45px;
 	font-weight: 700;
   margin-bottom: 30px;
+  color: #fff;
 }
 .contact form input, .contact form textarea {
   width: 100%;
@@ -703,7 +721,33 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 
 /* Anpassungen für Mobilgeräte (Bildschirmbreite bis zu ca.480 px) */
-@media (max-width: 480px) {
+@media (max-width: 580px) {
+
+  nav.navbar .navbar-nav .nav-link.navbar-link {
+    font-size: 1.2rem !important;
+  }
+
+  .vvd {
+    font-size: .9rem !important;
+  }
+
+  .social-icon a {
+    width: 30px;
+    height: 30px;
+  }
+
+  .social-icon a img {
+    width: 30% !important;
+  }
+
+
+  .row {
+    justify-content: center;
+  }
+
+  .col-md-4 {
+    width: 76% !important;
+  }
 
   .banner h1 {
     font-size: 2em;
@@ -723,6 +767,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
       height: 100%; /* Beibehaltung von 120% der Höhe auch auf Mobilgeräten */
   }
 
+  #footerLogo {
+    display: none;
+  }
 
 }
 
@@ -743,7 +790,61 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   }
 }
 
+@media (max-width: 992px) {
 
+  nav.navbar.scrolled {
+    padding: 0px 0;
+    background-color: transparent;
+  }
+  .navbar-collapse{
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-end !important;
+    
+  }
+
+  .navbar-nav {
+    /* background-color: blue; */
+   width: 100% !important;
+   display: flex !important;
+   align-items: flex-end  !important;
+  }
+
+  nav.navbar .navbar-nav .nav-link.navbar-link {
+    font-size: 1.6rem;
+    padding: 0 !important;
+    margin-left: -.5rem;
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-end  !important;
+    margin-right: .4em !important;
+    opacity: 100 !important;
+    z-index: 10 !important;
+  }
+  .navbar-text {
+    display: flex;
+    flex-direction: column;
+    padding: 0 !important;
+    align-items: flex-end  !important;
+    z-index: 10;
+  }
+
+  .social-icon {
+    display: flex;
+    justify-content: center;
+    margin: 1.4rem 0;
+    margin-right: .2em !important;
+    z-index: 10000 !important;
+  }
+
+  .vvd {
+    padding: 4px 8px !important;
+    margin: 0 !important;
+    margin-right: .5em !important;
+    opacity: 100;
+  }
+}  
 
 
 

@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import { Container, Row, Col, Tab, Nav, Modal, Button } from "react-bootstrap";
-import calc from "../assets/img/calc.jpg";
-import todo from "../assets/img/todo.jpg";
+
+import calc from "../assets/img/calculator1.png";
+import todo from "../assets/img/to-do-list1.png";
 import game from "../assets/img/game.jpg";
 import household from "../assets/img/household.jpg";
 import wetter from "../assets/img/windy.png";
 import lernapp from "../assets/img/lernapp.png";
+
 import Calculator from './Calculator'; 
 import ToDo from './ToDo';
 import RockPaperScissors from './RockPaperScissors';

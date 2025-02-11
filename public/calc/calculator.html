@@ -9,6 +9,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/14.0.1/math.min.js" integrity="sha512-PbOEC/cOHBQKshG/XgYoI+kff08IraowCgPlDT8NL91+ZPaeuvWVtC7jYTDua9Kow5QTpX+EMIM0RBKAA2Hsmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
   <title>Calculater2</title>
   <link rel="stylesheet" type="text/css" href="./css/calc2.css" media="screen">
 
@@ -20,7 +23,20 @@
         <textarea id="display" disabled></textarea>
      </div>
      <div class="calcInput">
+
         <div class="d-flex justify-content-center pt-2 ">
+          <i class="bi bi-chevron-compact-left d-flex align-items-center justify-content-center rounded-circle bg-secondary  icon-style"  type="button" id="leftBrace"></i>
+
+          <i class="bi bi-chevron-compact-right d-flex align-items-center justify-content-center rounded-circle bg-secondary  icon-style"  type="button" id="rightBrace"></i>
+
+          <i class="fa-solid fa-square-root-variable d-flex align-items-center justify-content-center rounded-circle bg-secondary  icon-style"  type="button" id="root"></i>
+
+          <i class="bi bi-2-square d-flex align-items-center justify-content-center rounded-circle bg-secondary  icon-style"  type="button" id="squared"></i>
+        </div>
+
+
+        <div class="d-flex justify-content-center pt-2 ">
+
           <i class="fa-solid fa-c d-flex align-items-center justify-content-center rounded-circle bg-secondary  icon-style"  type="button" id="clear"></i>
 
           <i class="bi bi-plus-slash-minus d-flex align-items-center justify-content-center rounded-circle bg-secondary  icon-style"  type="button" id="plusMinus"></i>
@@ -83,7 +99,7 @@
 
 
 
-  <script src="js/functions2.js"></script>
+  <script type="module" src="./js/functions2.js"></script>
     
 </body>
 

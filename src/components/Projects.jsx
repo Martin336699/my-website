@@ -8,7 +8,7 @@ import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.png";
 
 
-export const Projects = () => {
+export const Projects = (props) => {
 
   const apps = [
     {
@@ -51,7 +51,7 @@ export const Projects = () => {
   ];
 
   return (
-    <section className="project" id="projects">
+    <section className={`project ${props.light}`} id="projects">
       <Container>
         <Row>
           <Col>

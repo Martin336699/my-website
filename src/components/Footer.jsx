@@ -4,9 +4,9 @@ import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon2 from '../assets/img/xing.svg';
 import navIcon3 from '../assets/img/github.svg';
 
-export const Footer = () => {
+export const Footer = ({theme}) => {
   return (
-    <footer className="footer">
+    <footer className={`footer ${theme}`}>
       <Container>
         <Row className="align-items-center">
           <Col sm={6}>

@@ -27,6 +27,71 @@ html {
   scroll-padding-top: 75px;
 }
 
+.light, .light a, .light p, .light h1, .light h2, .light h3, 
+.light h4, .light h5, .light h6,
+.light input, .light textarea, .light select, .light ul, .light li,
+.light label, .light .nav-link, .light .nav-link.active, .light .nav-link:hover,
+.light .contact form input, .light .contact form textarea, .light .contact form button, .light .contact img,
+.light .contact form input::placeholder, .light .contact form textarea::placeholder{
+  
+  background-color: grey !important;
+  background: #fff !important;
+  color: #121212 !important;
+  border-color: #121212 !important;
+}
+
+.light .social-icon a{
+  background: #121212 !important;
+  border: 1px solid #fff !important;
+}
+
+.light .contact form button,
+.light .navbar-text button {
+  background: #121212 !important;
+  border: 1px solid #121212 !important;
+}
+
+.light .navbar-text button:hover,
+.light .contact form button {
+  background: #fff !important;
+}
+
+.light .contact form button span:hover, .light .contact form button:hover {
+  color: #fff !important;
+  background-color: transparent !important;
+}
+
+.light .contact img {
+  background: lightgray !important;
+  border-radius: 3em !important;
+}
+
+.light .skill-bx {
+  border: 1px solid #121212 !important;
+  box-shadow: 2px 2px 15px #121212, /* Äußerer Schatten */
+        inset 0 -2px 2px #121212 !important; /* Innerer Schatten */
+}
+
+.light .navbar,
+.light .navbar label,
+.light nav.navbar .navbar-nav .nav-link.navbar-link,
+.light nav.navbar a.navbar-brand,
+.light .banner,
+.light .banner h1,
+.light .banner p,
+.light .project,
+.light .project p,
+.light .project h2,
+.light .footer,
+.light .footer p {
+  background: lightgray !important;
+}
+
+.light .banner button,
+.light nav.navbar .navbar-nav .nav-link.navbar-link {
+  color: #202cb2 !important;
+}
+
 body {
   font-weight: 400;
   overflow-x: hidden;
@@ -237,6 +302,15 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 	border-color: transparent;
 }
+label {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  margin: 0;
+  padding: 5px;
+}
+
 
 /************ Banner Css ************/
 .banner {

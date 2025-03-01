@@ -4,7 +4,7 @@ import { ArrowRightCircle } from "react-bootstrap-icons";
 import { handleButtonClick } from "./Navbar.jsx";
 import headerImg from "../assets/img/ich3.1.jpg";
 
-export const Banner = () => {
+export const Banner = ({ theme }) => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const toRotate = [ "Web Developer", "Web Designer", "UI/UX Designer" ];
@@ -43,7 +43,7 @@ export const Banner = () => {
   }
 
   return (
-    <section className="banner" id="home">
+    <section className={`banner ${theme}`} id="home">
       <Container>
         <Row className="align-items-center">
           <Col xs={12} md={6} xl={7}>

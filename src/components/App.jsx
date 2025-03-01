@@ -6,17 +6,23 @@ import { Projects } from './ProjectsTest.jsx';
 import { Contact } from "./Contact.jsx";
 import { Footer } from "./Footer.jsx";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { useState } from 'react';
 
 function App() {
-  return ( 
-    <div className="App">
-    <NavBar />
-    <Banner />
-    <Skills />
-    <Projects />
-    <Contact />
-    <Footer />
+  const [theme, setTheme] = useState('light'); // New state variable for theme
 
+  const handleThemeChange = (e) => {
+    setTheme(e.target.value);
+  };
+
+  return (
+    <div className={`App ${theme}`}>
+      <NavBar theme={theme} onThemeChange={handleThemeChange} />
+      <Banner theme={theme} />
+      <Skills theme={theme} />
+      <Projects theme={theme} />
+      <Contact theme={theme} />
+      <Footer theme={theme} />
     </div>
   );
 }

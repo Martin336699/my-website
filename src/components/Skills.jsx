@@ -9,7 +9,7 @@ import react from "../assets/img/react.svg";
 import ts from "../assets/img/ts.svg";
 
 
-export const Skills = () => {
+export const Skills = ({theme}) => {
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -35,7 +35,7 @@ export const Skills = () => {
       <Container>
         <Row>
           <Col>
-          <div className="skill-bx">
+          <div className={`skill-bx ${theme}`}>
             <h2>
               Skills
             </h2>

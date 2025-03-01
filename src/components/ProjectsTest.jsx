@@ -15,7 +15,7 @@ import Haushaltsbuch from './Haushaltsbuch';
 import Weather from './Weather';
 import LernApp from './LernApp';
 
-export const Projects = () => {
+export const Projects = ({theme}) => {
   const [showModal, setShowModal] = useState(false);
   const [selectedProjectComponent, setSelectedProjectComponent] = useState(null);
 
@@ -75,7 +75,7 @@ component: <Weather />
 ];
 
 return (
-<section className="project" id="projects">
+<section className={`project ${theme}`} id="projects">
 <Container>
 <Row>
   <Col>
